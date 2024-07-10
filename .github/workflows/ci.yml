@@ -42,4 +42,7 @@ jobs:
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       run: mvn sonar:sonar \
+        -Dsonar.host.url=${{ secrets.SONAR_URL }} \
         -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+# 
+
