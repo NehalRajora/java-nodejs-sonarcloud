@@ -21,6 +21,7 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
+        cache: 'maven'
 
     - name: Cache Maven packages
       uses: actions/cache@v4
@@ -40,8 +41,5 @@ jobs:
     - name: SonarCloud Scan
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        JAVA_HOME: /path/to/java17
-      run: |
-        echo "JAVA_HOME is set to $JAVA_HOME"
-        mvn sonar:sonar \
+      run: mvn sonar:sonar \
         -Dsonar.login=${{ secrets.SONAR_TOKEN }}
