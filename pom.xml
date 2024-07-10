@@ -12,10 +12,10 @@
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
-    <properties>
+    <!-- <properties>
         <sonar.organization>java-nodejs-sonarcloud</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-    </properties>
+    </properties> -->
 
     <!-- <properties>
         <sonar.java.jdkHome>pathToJdk17</sonar.java.jdkHome>
