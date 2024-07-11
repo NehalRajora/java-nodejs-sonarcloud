@@ -43,8 +43,9 @@ jobs:
 
     - name: SonarCloud Scan
       env:
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}  
       run: mvn sonar:sonar \
-        -Dsonar.login=${{ secrets.SONAR_TOKEN }} 
-        
+        -Dsonar.login=${{ secrets.SONAR_TOKEN }} \
+        mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar 
+        # -Dsonar.scm.disabled=true
 
