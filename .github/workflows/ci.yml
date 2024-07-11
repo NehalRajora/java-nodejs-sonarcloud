@@ -23,7 +23,7 @@ jobs:
           node-version: '14'
 
     - name: Build with Maven cloud
-      run:  mvn -B verify sonar:sonar  -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
+      run:  mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=java-nodejs-sonarcloud
       env:
         GIT_HUB_TOKEN: ${{ secrets._GIT_HUB_TOKEN }}
         SONARCLOUD_TOKEN: ${{ secrets.SONAR_TOKEN }}
