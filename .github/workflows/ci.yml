@@ -46,6 +46,5 @@ jobs:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}  
       run: mvn sonar:sonar \
         -Dsonar.login=${{ secrets.SONAR_TOKEN }} \
-        -Dsonar.scm.disabled=true \
-        -Dsonar.host.url="https://sonarcloud.io"
+        -Dsonar.scm.disabled=true 
 
