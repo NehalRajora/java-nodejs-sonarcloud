@@ -4,12 +4,15 @@
     "description": "A Node.js project with SonarCloud integration",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
+        "test": "mocha",
         "sonar": "sonar-scanner"
     },
     "author": "Your Name",
     "license": "ISC",
+    "dependencies": {
+        "sonarqube-scanner": "^2.8.0"
+    },
     "devDependencies": {
-        "sonarqube-scanner": "^4.0.1"
+        "mocha": "^8.4.0"
     }
 }
