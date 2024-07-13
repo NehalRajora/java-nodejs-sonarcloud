@@ -1,0 +1,15 @@
+{
+    "name": "nodejs-sonarcloud",
+    "version": "1.0.0",
+    "description": "A Node.js project with SonarCloud integration",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "sonar": "sonar-scanner"
+    },
+    "author": "Your Name",
+    "license": "ISC",
+    "devDependencies": {
+        "sonarqube-scanner": "^4.0.1"
+    }
+}
